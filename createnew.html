@@ -1,72 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
+function arraynumbers(array){
+    var total=0;
+    for( var i=0 ;i< array.length; i++){
+        total=total+array(i)
+        return total;
+    }
+} 
+arraynumbers([1,2,3,4,5,6]);
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new slack</title>
-</head>
-<style>
-    .row{
-        display: flex;
-        flex-flow: row wrap;
+function totalnumbers (array){
+    var sum = 0;
+    for(var i=0; i < array.length; i++){
+        sum = sum + array[i];
     }
-    .h-center{
-        justify-content: center;
+    return sum;
+}
+totalnumbers ([1,2,3,4])
+
+function total_numbers (array){
+    var sum=0;
+    for( var i=0 ;i < array.length ;i++){
+        sum = sum + array[i];
     }
-    .text-center{
-        text-align: center;
+    return sum;
+}
+total_numbers([7,9,9832793,2833]);
+
+function totalcount (array){
+    var sum=0;
+    for (var i=0 ;i < array.length;i++){
+        sum=sum=array[i];
     }
-    .p-r{
-        margin-right: 50px;
+    return sum;
+}
+
+function maximum_number (array) {
+    var max =array [0];
+    for (var i=0 ;i < array.length ; i++) {
+        if (array [i] > max)
+        max = array [i];
     }
-    .m-t{
-        margin-top: 20px;
+    return max;
+}
+
+maximum_number ([2,3,4,5,6,7,8])
+
+function minimumnumber (array) {
+   var min = array [0];
+    for ( var i=0 ; i < array.lemgth ;i++) {
+        if (array[i] < min)
+        min = array[i];
     }
-    .col-12{
-        flex:0 0 100%;
-    }
-    .col-3{
-        flex:0 0 25%;
-    }
-</style>
-<body>
-    <div class="row">
-    <div class="col-12" >
-        <div class="row h-center text-center">
-            <div class="col-3 p-r  ">
-               <div class="byani"> Biriyani amount</div>
-                <input id="byani" type="text">
-            </div>
-            <div class="col-3 p-r">
-                <div class="offer">offer</div>
-                <input id="offer" type="text">
-            </div>
-            <div class="col-3 p-r m-t">
-                <button id="add">add</button>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    <script>
-      
-        function payamount() {
-           var biriyanioffer = document.getElementById("offer").value;
-           var biriyanprize = document.getElementById("byani").value;
-           var biriyani=(biriyanioffer*(biriyanprize/100));
-           return biriyani;
+    return min;
+} 
+minimumnumber ([3,5,8,9,2]);
+function oddnumber (input){
+var output= [];
+for (var i=0 ; i < input.length ;i++){
+    if (input %2 ===1){
+    output=push(input[i]);}
+}
+return output;
+}
+oddnumber ([1,2,3,4,5,6,7,8])
+
+
+function evennumber (input){
+    var output=[];
+    for (var i=0;i < input.length;i++){
+        if (input[i] % 2 ===0){
+            output.push (input[i]);
         }
-        var add = document.getElementById("add");
-        add.addEventListener('click', function (){
-            payamount();
-        });
+    }
+    return output;
+}
+evennumber ([2,4,6,7,8,9,9,55,53,2,4])
+
+function reversenum (array){
+    var order=[];
+    for( var i=0;i < array.length;i++){
+        order.unshift(array[i]);
+    }
+    return order;
+}
+reversenum ([1,2,3,4,5]);
 
 
 
 
-    </script>
-</body>
 
-</html>
+function oddevennumber (input) {
+    var odd = [];
+    var even = [];
+    var comman=[];
+    for (var i = 0; i < input.length; i++) {
+        if (input[i] % 2 === 1) {
+            odd.push(input[i]);
+        } else {
+            even.push(input[i]);
+        }  
+    }
+    var comman = odd.concat(even);
+    return comman;
+}
+
+<script>
+var a =6;
+var b=3;
+var akash="";
+for( var i=0;i< a;i++){
+    for( var i=0;i< b;i++){
+        akash +="*";
+    }
+    akash +="\n";
+}
+console.log(akash)
+
+
+
+// STAR PATTERN
+
+var n = 6;
+var string = "";
+for( var i = 0; i < n; i++){
+    for(var j = 0; j < n; j++){
+        if(i === 0 || i === n - 1){
+       string +="*";
+        }
+        else {
+            if(j === 0 || j === n-1){
+                string += "*";
+            }
+            else{
+                string += " ";
+            }
+        }
+    }
+    string + ="\br"
+}
+</script>
